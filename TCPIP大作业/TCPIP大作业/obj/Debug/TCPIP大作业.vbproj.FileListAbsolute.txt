@@ -1,0 +1,15 @@
+Y:\vb作业\TCPIP大作业\TCPIP大作业\bin\Debug\TCPIP大作业.exe.config
+Y:\vb作业\TCPIP大作业\TCPIP大作业\bin\Debug\TCPIP大作业.exe
+Y:\vb作业\TCPIP大作业\TCPIP大作业\bin\Debug\TCPIP大作业.pdb
+Y:\vb作业\TCPIP大作业\TCPIP大作业\bin\Debug\TCPIP大作业.xml
+Y:\vb作业\TCPIP大作业\TCPIP大作业\obj\Debug\TCPIP大作业.vbprojResolveAssemblyReference.cache
+Y:\vb作业\TCPIP大作业\TCPIP大作业\obj\Debug\TCPIP大作业.Resources.resources
+Y:\vb作业\TCPIP大作业\TCPIP大作业\obj\Debug\TCPIP大作业.vbproj.GenerateResource.Cache
+Y:\vb作业\TCPIP大作业\TCPIP大作业\obj\Debug\TCPIP大作业.exe
+Y:\vb作业\TCPIP大作业\TCPIP大作业\obj\Debug\TCPIP大作业.xml
+Y:\vb作业\TCPIP大作业\TCPIP大作业\obj\Debug\TCPIP大作业.pdb
+Y:\vb作业\TCPIP大作业\TCPIP大作业\obj\Debug\TCPIP大作业.Help.resources
+Y:\vb作业\TCPIP大作业\TCPIP大作业\obj\Debug\TCPIP大作业.Charge.resources
+Y:\vb作业\TCPIP大作业\TCPIP大作业\obj\Debug\TCPIP大作业.Welcome.resources
+Y:\vb作业\TCPIP大作业\TCPIP大作业\obj\Debug\TCPIP大作业.Calcolator.resources
+Y:\vb作业\TCPIP大作业\TCPIP大作业\obj\Debug\TCPIP大作业.Sign_in.resources
