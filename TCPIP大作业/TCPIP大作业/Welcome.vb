@@ -1,5 +1,5 @@
-﻿Public Class Welcome
-
+﻿
+Public Class Welcome
     Private Sub LinkLabel1_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
         Sign_in.Show()
 
@@ -30,8 +30,7 @@
                     MessageBox.Show("There's no such a Account or with Wrong Password,Please Rewrite or Register a New Account", "ERROE2")
                     Exit While
                 ElseIf TextBox2.Text = Password(a) Then
-                    Me.Hide()
-                    Calcolator.Show()
+                    d = 1
                     Exit While
                 End If
             Else a = a + 1
@@ -42,6 +41,19 @@
             End If
         End While
 
+        If d = 1 Then
+            MessageBox.Show("Wait a Minute,Connecting Now", "")
+            Call TCPIP_Init()
+        End If
+        If c = 1 Then
+            c = 0
+            Exit Sub
+        ElseIf c = 0 And d = 1 Then
+            d = 0
+            Me.Hide()
+            Calcolator.Show()
+        End If
+        Exit Sub
 
     End Sub
 
@@ -50,6 +62,9 @@
     End Sub
 
     Private Sub TextBox2_TextChanged(sender As Object, e As EventArgs) Handles TextBox2.TextChanged
+    End Sub
+
+    Private Sub Welcome_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
 End Class
