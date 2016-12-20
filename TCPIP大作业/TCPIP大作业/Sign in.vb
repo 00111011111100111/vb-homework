@@ -2,7 +2,10 @@
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Dim a = 0
         While a < 101
-            If Account(a) = TextBox1.Text Then
+            If TextBox1.Text = "" Then
+                MessageBox.Show("Input your Account! ")
+                Exit While
+            ElseIf Account(a) = TextBox1.Text Then
                 MessageBox.Show("the Account have been registered! ")
                 Exit While
             Else a = a + 1
@@ -15,7 +18,10 @@
                 Exit While
             Else
                 If a = 101 Then
-                    If TextBox2.Text = TextBox3.Text Then
+                    If TextBox2.Text = "" Then
+                        MessageBox.Show("Input your Password!", "")
+                        Exit While
+                    ElseIf TextBox2.Text = TextBox3.Text Then
                         Account(b) = TextBox1.Text
                         Password(b) = TextBox2.Text
                         MessageBox.Show("successfully registered!", "")
@@ -23,10 +29,10 @@
                         Exit While
                     Else
                         MessageBox.Show("Rewrite Your Password again", "")
-                        Exit While
+                            Exit While
+                        End If
                     End If
                 End If
-            End If
 
 
         End While
