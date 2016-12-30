@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{5B4AECF3-87F1-4F79-A537-BDD4CBF1B885}</ProjectGuid>
+    <ProjectGuid>{A00F0BE8-40D6-4C49-A8DF-6D6A07A6A774}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>TCPIP大作业.My.MyApplication</StartupObject>
-    <RootNamespace>TCPIP大作业</RootNamespace>
-    <AssemblyName>TCPIP大作业</AssemblyName>
+    <StartupObject>服务器端.My.MyApplication</StartupObject>
+    <RootNamespace>服务器端</RootNamespace>
+    <AssemblyName>服务器端</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
@@ -21,8 +21,9 @@
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\Debug\</OutputPath>
-    <DocumentationFile>TCPIP大作业.xml</DocumentationFile>
+    <DocumentationFile>服务器端.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -31,7 +32,7 @@
     <DefineTrace>true</DefineTrace>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DocumentationFile>TCPIP大作业.xml</DocumentationFile>
+    <DocumentationFile>服务器端.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup>
@@ -72,36 +73,11 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Calcolator.Designer.vb">
-      <DependentUpon>Calcolator.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Calcolator.vb">
+    <Compile Include="Server.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Charge.Designer.vb">
-      <DependentUpon>Charge.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Charge.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Module1.vb" />
-    <Compile Include="Sign in.Designer.vb">
-      <DependentUpon>Sign in.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Sign in.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Welcome.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Welcome.Designer.vb">
-      <DependentUpon>Welcome.vb</DependentUpon>
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Help.Designer.vb">
-      <DependentUpon>Help.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Help.vb">
+    <Compile Include="Server.Designer.vb">
+      <DependentUpon>Server.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -121,20 +97,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Calcolator.resx">
-      <DependentUpon>Calcolator.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Charge.resx">
-      <DependentUpon>Charge.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Sign in.resx">
-      <DependentUpon>Sign in.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Welcome.resx">
-      <DependentUpon>Welcome.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Help.resx">
-      <DependentUpon>Help.vb</DependentUpon>
+    <EmbeddedResource Include="Server.resx">
+      <DependentUpon>Server.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

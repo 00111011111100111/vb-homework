@@ -1,4 +1,5 @@
 ﻿Public Class Sign_in
+
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Dim a = 0
         While a < 101
@@ -29,10 +30,10 @@
                         Exit While
                     Else
                         MessageBox.Show("Rewrite Your Password again", "")
-                            Exit While
-                        End If
+                        Exit While
                     End If
                 End If
+            End If
 
 
         End While
@@ -49,5 +50,16 @@
 
     Private Sub TextBox2_TextChanged(sender As Object, e As EventArgs) Handles TextBox2.TextChanged
 
+    End Sub
+
+    Private Sub Sign_in_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Account(0) = "admin"
+        Password(0) = "admin"
+        Account(1) = "1"
+        Password(1) = "1"
+        Account(2) = "2"
+        Password(2) = "2"
+        Account(3) = "1351783"
+        Password(3) = "1351783"
     End Sub
 End Class

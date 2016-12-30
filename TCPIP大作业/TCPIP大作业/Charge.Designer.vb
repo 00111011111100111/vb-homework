@@ -22,20 +22,14 @@ Partial Class Charge
     '不要使用代码编辑器修改它。
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
-        '
-        'TextBox2
-        '
-        Me.TextBox2.Location = New System.Drawing.Point(214, 211)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(290, 25)
-        Me.TextBox2.TabIndex = 10
         '
         'TextBox1
         '
@@ -43,16 +37,6 @@ Partial Class Charge
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(290, 25)
         Me.TextBox1.TabIndex = 9
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("微软雅黑", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
-        Me.Label3.Location = New System.Drawing.Point(109, 217)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(81, 19)
-        Me.Label3.TabIndex = 8
-        Me.Label3.Text = "Password"
         '
         'Label2
         '
@@ -66,32 +50,58 @@ Partial Class Charge
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(273, 386)
+        Me.Button1.Location = New System.Drawing.Point(292, 450)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(129, 55)
         Me.Button1.TabIndex = 6
         Me.Button1.Text = "Charge"
         Me.Button1.UseVisualStyleBackColor = True
         '
-        'ComboBox1
+        'TextBox3
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"10", "20", "50", "100", "200", "500", "1000"})
-        Me.ComboBox1.Location = New System.Drawing.Point(214, 274)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(290, 23)
-        Me.ComboBox1.TabIndex = 11
-        Me.ComboBox1.Text = "Rechange Volume"
+        Me.TextBox3.Location = New System.Drawing.Point(214, 225)
+        Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.Size = New System.Drawing.Size(290, 25)
+        Me.TextBox3.TabIndex = 13
+        '
+        'TextBox4
+        '
+        Me.TextBox4.Location = New System.Drawing.Point(214, 303)
+        Me.TextBox4.Name = "TextBox4"
+        Me.TextBox4.Size = New System.Drawing.Size(290, 25)
+        Me.TextBox4.TabIndex = 14
+        Me.TextBox4.UseSystemPasswordChar = True
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("微软雅黑", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.Label4.Location = New System.Drawing.Point(67, 231)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(123, 19)
+        Me.Label4.TabIndex = 15
+        Me.Label4.Text = "Charge Card ID"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("微软雅黑", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.Label5.Location = New System.Drawing.Point(14, 309)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(176, 19)
+        Me.Label5.TabIndex = 16
+        Me.Label5.Text = "Charge card Password"
         '
         'Charge
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(653, 569)
-        Me.Controls.Add(Me.ComboBox1)
-        Me.Controls.Add(Me.TextBox2)
+        Me.Controls.Add(Me.Label5)
+        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.TextBox4)
+        Me.Controls.Add(Me.TextBox3)
         Me.Controls.Add(Me.TextBox1)
-        Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Button1)
         Me.Name = "Charge"
@@ -100,11 +110,11 @@ Partial Class Charge
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents TextBox2 As TextBox
     Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Button1 As Button
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Label5 As Label
 End Class

@@ -1,17 +1,25 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Welcome
     Inherits System.Windows.Forms.Form
 
     'Form 重写 Dispose，以清理组件列表。
-    <System.Diagnostics.DebuggerNonUserCode()> _
-    Protected Overrides Sub Dispose(ByVal disposing As Boolean)
-        Try
-            If disposing AndAlso components IsNot Nothing Then
+    <System.Diagnostics.DebuggerNonUserCode()>
+    Protected Overloads Overrides Sub Dispose(ByVal disposing As Boolean)
+        If tcpConnect Then
+            swWriter.WriteLine("STOP")
+            '发送控制码
+            swWriter.Flush()
+            '刷新当前数据流中的数据
+            nsStream.Close()
+            swWriter.Close()
+            '清除资源 ( ) 
+        End If
+        If disposing Then
+            If Not (components Is Nothing) Then
                 components.Dispose()
             End If
-        Finally
-            MyBase.Dispose(disposing)
-        End Try
+        End If
+        MyBase.Dispose(disposing)
     End Sub
 
     'Windows 窗体设计器所必需的
@@ -20,7 +28,7 @@ Partial Class Welcome
     '注意: 以下过程是 Windows 窗体设计器所必需的
     '可以使用 Windows 窗体设计器修改它。  
     '不要使用代码编辑器修改它。
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -29,8 +37,9 @@ Partial Class Welcome
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
-        Me.LinkLabel2 = New System.Windows.Forms.LinkLabel()
         Me.LinkLabel3 = New System.Windows.Forms.LinkLabel()
+        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'Button1
@@ -99,17 +108,6 @@ Partial Class Welcome
         Me.LinkLabel1.TabStop = True
         Me.LinkLabel1.Text = "Here to Get a New Account "
         '
-        'LinkLabel2
-        '
-        Me.LinkLabel2.AutoSize = True
-        Me.LinkLabel2.Font = New System.Drawing.Font("微软雅黑", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
-        Me.LinkLabel2.Location = New System.Drawing.Point(735, 593)
-        Me.LinkLabel2.Name = "LinkLabel2"
-        Me.LinkLabel2.Size = New System.Drawing.Size(154, 20)
-        Me.LinkLabel2.TabIndex = 7
-        Me.LinkLabel2.TabStop = True
-        Me.LinkLabel2.Text = "New to the Service?"
-        '
         'LinkLabel3
         '
         Me.LinkLabel3.AutoSize = True
@@ -121,13 +119,32 @@ Partial Class Welcome
         Me.LinkLabel3.TabStop = True
         Me.LinkLabel3.Text = "Rechange for your Account"
         '
+        'TextBox3
+        '
+        Me.TextBox3.Location = New System.Drawing.Point(368, 185)
+        Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.Size = New System.Drawing.Size(290, 25)
+        Me.TextBox3.TabIndex = 9
+        Me.TextBox3.Text = "Input your  Ethernet IP"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("微软雅黑", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.Label4.Location = New System.Drawing.Point(263, 185)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(24, 19)
+        Me.Label4.TabIndex = 10
+        Me.Label4.Text = "IP"
+        '
         'Welcome
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(978, 688)
+        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.TextBox3)
         Me.Controls.Add(Me.LinkLabel3)
-        Me.Controls.Add(Me.LinkLabel2)
         Me.Controls.Add(Me.LinkLabel1)
         Me.Controls.Add(Me.TextBox2)
         Me.Controls.Add(Me.TextBox1)
@@ -149,6 +166,7 @@ Partial Class Welcome
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents LinkLabel1 As LinkLabel
-    Friend WithEvents LinkLabel2 As LinkLabel
     Friend WithEvents LinkLabel3 As LinkLabel
+    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents Label4 As Label
 End Class
